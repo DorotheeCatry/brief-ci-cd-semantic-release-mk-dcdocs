@@ -59,13 +59,7 @@ jobs:
         run: uv run bandit -r app/
 
       - name: Check dependencies with Safety
-        # Note: Safety might require an API key for full database access,
-        # but basic checks usually work or we can use pip-audit as alternative if needed.
-        # For now we use safety as requested.
-        run: uv run safety check || true
-        # Added || true because safety might fail without API key or on some envs,
-        # and we don't want to block the tutorial flow too hard initially.
-        # Ideally this should be strict.
+        run: uv run safety check
 
   tests:
     runs-on: ubuntu-latest
