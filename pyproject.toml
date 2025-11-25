@@ -28,12 +28,12 @@ dev = [
     "safety>=3.0.1",
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
-    "sqlalchemy-stubs>=0.4",
+    "pre-commit>=3.6.0",
 ]
 
 [tool.ruff]
 line-length = 88
-target-version = "py313"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = [

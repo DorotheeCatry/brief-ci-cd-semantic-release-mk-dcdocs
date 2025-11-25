@@ -51,8 +51,11 @@ def delete_item(item_id: int, db: Session = Depends(get_db)):
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Item with id {item_id} not found",
         )
+<<<<<<< HEAD
 
 
 def _old_helper_function(data):
     """Cette fonction n'est plus utilisée mais n'a pas été supprimée."""
     return data.upper()
+=======
+>>>>>>> 46bded4 (chore: setup pre-commit hooks for linting, formatting and security)
