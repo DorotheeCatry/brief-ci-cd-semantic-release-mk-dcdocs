@@ -60,6 +60,4 @@ def delete_item(item_id: int, db: Session = Depends(get_db)) -> None:
         )
 
 
-def _old_helper_function(data: str) -> str:
-    """Cette fonction n'est plus utilisée mais n'a pas été supprimée."""
-    return data.upper()
+
