@@ -16,10 +16,12 @@ async def lifespan(fastapi_app: FastAPI) -> AsyncGenerator[Any, None]:
     yield
 
 
+version = "0.1.0"
+
 app = FastAPI(
-    title="Items CRUD API",
-    description="API pour gérer une liste d'articles",
-    version="1.0.0",
+    title="Items API",
+    description="API de gestion d'items avec CI/CD",
+    version=version,
     lifespan=lifespan,
 )
 
