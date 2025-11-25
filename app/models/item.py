@@ -1,5 +1,6 @@
 from sqlmodel import Field, SQLModel
 
+
 class Item(SQLModel, table=True):
     __tablename__ = "items"
 
@@ -7,5 +8,5 @@ class Item(SQLModel, table=True):
     nom: str = Field(index=True)
     prix: float
 
-    def _legacy_method(self):
+    def _legacy_method(self) -> None:
         pass
