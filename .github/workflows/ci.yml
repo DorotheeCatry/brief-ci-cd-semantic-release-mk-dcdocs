@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install uv
         uses: astral-sh/setup-uv@v3
         with:
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install uv
         uses: astral-sh/setup-uv@v3
         with:
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install uv
         uses: astral-sh/setup-uv@v3
         with:
@@ -59,11 +59,11 @@ jobs:
         run: uv run bandit -r app/
 
       - name: Check dependencies with Safety
-        # Note: Safety might require an API key for full database access, 
+        # Note: Safety might require an API key for full database access,
         # but basic checks usually work or we can use pip-audit as alternative if needed.
         # For now we use safety as requested.
-        run: uv run safety check || true 
-        # Added || true because safety might fail without API key or on some envs, 
+        run: uv run safety check || true
+        # Added || true because safety might fail without API key or on some envs,
         # and we don't want to block the tutorial flow too hard initially.
         # Ideally this should be strict.
 
@@ -85,7 +85,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install uv
         uses: astral-sh/setup-uv@v3
         with:
