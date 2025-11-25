@@ -37,8 +37,8 @@ def health() -> dict[str, str]:
     return {"status": "healthy"}
 
 
-secret = "fezffzefzefzlfzhfzfzfjzfzfzfdzgerg54g651fzefg51zeg5g"
-API_KEY = "sk-1234567890abcdef"
+secret = os.getenv("SECRET_KEY", "default-insecure-secret-for-dev")
+API_KEY = os.getenv("API_KEY", "default-insecure-api-key-for-dev")
 
 very_long_variable_name_that_exceeds_line_length = (
     "Cette ligne est intentionnellement trop longue "
