@@ -64,3 +64,52 @@ python_files = "test_*.py"
 python_functions = "test_*"
 addopts = "--strict-markers --cov=app --cov-report=term-missing"
 pythonpath = "."
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+version_variables = ["app/main.py:version"]
+branch = "main"
+changelog_file = "CHANGELOG.md"
+build_command = "uv build"
+dist_path = "dist/"
+upload_to_release = true
+upload_to_pypi = false
+remove_dist = false
+patch_without_tag = true
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+prerelease_token = "rc"
+prerelease = false
+
+[tool.semantic_release.branches.develop]
+match = "(develop|dev)"
+prerelease = true
+prerelease_token = "beta"
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = [
+    "chore\\(release\\):",
+    "chore\\(deps\\):",
+    "ci:",
+    "docs:",
+    "style:",
+    "refactor:",
+    "test:",
+]
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "style",
+    "refactor",
+    "test",
+]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
