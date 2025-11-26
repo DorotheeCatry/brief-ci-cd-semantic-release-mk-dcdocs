@@ -63,6 +63,19 @@ docker-compose up --build
 uv run pytest
 ```
 
+## Documentation
+
+The project documentation is built with [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+
+To run the documentation server locally:
+
+```bash
+uv run mkdocs serve
+```
+
+The command will output the URL where the documentation is hosted (usually `http://127.0.0.1:8000`).
+
+
 ## CI/CD Pipeline
 
 The project uses GitHub Actions for Continuous Integration:
