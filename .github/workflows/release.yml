@@ -32,6 +32,13 @@ jobs:
 
       - name: Install dependencies
         run: uv sync
+      - name: Debug Git Tags
+        run: |
+          git fetch --tags
+          git tag -l
+          git status
+          git log -n 5 --oneline --decorate
+
 
       - name: Python Semantic Release
         env:
