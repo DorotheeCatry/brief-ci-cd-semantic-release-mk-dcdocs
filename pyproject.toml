@@ -17,6 +17,7 @@ dependencies = [
     "safety>=3.7.0",
     "python-semantic-release>=9.12.0",
     "sqlmodel>=0.0.27",
+    "ghp-import>=2.1.0",
 ]
 
 [dependency-groups]
