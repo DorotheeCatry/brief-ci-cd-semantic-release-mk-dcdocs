@@ -46,6 +46,3 @@ jobs:
             --head $BRANCH_NAME \
             --title "chore: sync main to develop" \
             --body "Syncing changes from main to develop."
-
-          # Merge the Pull Request
-          gh pr merge $BRANCH_NAME --merge
