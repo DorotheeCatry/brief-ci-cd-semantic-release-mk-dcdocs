@@ -48,4 +48,4 @@ jobs:
             --body "Syncing changes from main to develop."
 
           # Merge the Pull Request
-          gh pr merge $BRANCH_NAME --merge --auto
+          gh pr merge $BRANCH_NAME --merge
