@@ -15,8 +15,9 @@ dependencies = [
     "pytest>=9.0.1",
     "ruff>=0.14.6",
     "safety>=3.7.0",
-    "semantic-release>=0.1.0",
+    "python-semantic-release>=9.12.0",
     "sqlmodel>=0.0.27",
+    "ghp-import>=2.1.0",
 ]
 
 [dependency-groups]
