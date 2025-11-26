@@ -4,7 +4,7 @@ from sqlmodel import Session
 from app.models.item import Item
 
 
-def test_create_item(client: TestClient):
+def test_create_item(client: TestClient) -> None:
     response = client.post(
         "/items/",
         json={"nom": "Test Item", "prix": 10.5},
@@ -17,7 +17,7 @@ def test_create_item(client: TestClient):
     assert data["id"] is not None
 
 
-def test_read_items(client: TestClient, session: Session):
+def test_read_items(client: TestClient, session: Session) -> None:
     item1 = Item(nom="Item 1", prix=10.0)
     item2 = Item(nom="Item 2", prix=20.0)
     session.add(item1)
@@ -33,7 +33,7 @@ def test_read_items(client: TestClient, session: Session):
     assert data[1]["nom"] == "Item 2"
 
 
-def test_read_item(client: TestClient, session: Session):
+def test_read_item(client: TestClient, session: Session) -> None:
     item = Item(nom="Test Item", prix=10.0)
     session.add(item)
     session.commit()
@@ -46,7 +46,7 @@ def test_read_item(client: TestClient, session: Session):
     assert data["id"] == item.id
 
 
-def test_update_item(client: TestClient, session: Session):
+def test_update_item(client: TestClient, session: Session) -> None:
     item = Item(nom="Test Item", prix=10.0)
     session.add(item)
     session.commit()
@@ -62,7 +62,7 @@ def test_update_item(client: TestClient, session: Session):
     assert data["prix"] == 15.0
 
 
-def test_delete_item(client: TestClient, session: Session):
+def test_delete_item(client: TestClient, session: Session) -> None:
     item = Item(nom="Test Item", prix=10.0)
     session.add(item)
     session.commit()

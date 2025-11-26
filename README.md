@@ -1,6 +1,9 @@
 # Items CRUD API
 
 ![CI Status](https://github.com/DorotheeCatry/brief-ci-cd-semantic-release-mk-dcdocs/actions/workflows/ci.yml/badge.svg)
+![Build](https://github.com/DorotheeCatry/brief-ci-cd-semantic-release-mk-dcdocs/workflows/Build%20&%20Push%20Docker%20Image/badge.svg)
+![Release](https://github.com/DorotheeCatry/brief-ci-cd-semantic-release-mk-dcdocs/workflows/Semantic%20Release/badge.svg)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 ![Python Version](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Code Style](https://img.shields.io/badge/code%20style-ruff-000000.svg)
 
